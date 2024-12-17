@@ -43,7 +43,9 @@ def CrawlVNExpress(article_url):
 
 def TTS(text):
     url = "https://viettelai.vn/tts/speech_synthesis"
-    TOKEN = '4fda5c6bb8b4ef34cb2dedf95ed987f3'
+    TOKEN = ''
+    if not TOKEN:
+        raise Exception("Token is empty")
 
     payload = json.dumps({
         "text": text,
@@ -65,7 +67,9 @@ def TTS(text):
 
 def AskGemini(text):
     print('Start asking Gemini...')
-    api_key = 'AIzaSyDOMPDl6R4ooRAb6_BX24Bju6x820OfqEk'
+    api_key = ''
+    if not api_key:
+        raise Exception("Token is empty")
     url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent'
     headers = {
         'Content-Type': 'application/json'
