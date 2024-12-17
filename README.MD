@@ -12,6 +12,8 @@ git clone
 pip install -r requirements.txt
 ```
 
+- Add enviroment variable 
+
 ## Usage
 There are two ways to run the application:
 - Run the application using the following command
